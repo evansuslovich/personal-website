@@ -1,4 +1,4 @@
-import "./topbar.scss"
+import "./Topbar.scss"
 
 export default function Topbar() {
     return (

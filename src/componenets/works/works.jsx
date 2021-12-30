@@ -1,8 +1,8 @@
-import "./works.scss"
+import "./Works.scss"
 
-export default function Intro() {
+export default function Works() {
     return (
-        <div classname="intro">
+        <div classname="works">
 
         </div>
     )
