@@ -1,4 +1,4 @@
-import Topbar from "./components/topbar/Topbar";
+import Topbar from "./componenets/topbar/Topbar";
 
 function App() {
   return (
