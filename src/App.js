@@ -1,9 +1,9 @@
+import Topbar from "./componenets/topbar/Topbar";
 
 function App() {
   return (
     <div className="App">
-      top
-      sec -intro -portfolio - work ... 
+    <Topbar/>
     </div>
   );
 }
