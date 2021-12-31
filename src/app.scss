@@ -7,7 +7,13 @@
         background-color: lightsalmon;
         position: relative;
         top: 70px;
+        scroll-behavior: smooth; 
+        // smooth behavior "smooth" makes it so when the topbar href is clicked
+        // it doesn't instantly move the user to the component; instead; it smoothly goes
+        // showing that the scenario has changed 
+
         scroll-snap-type: y mandatory;
+        // scroll-snap-type: gravitates towards the nearest component 
         scrollbar-width: none;
         &::-webkit-scrollbar{
             display:none;

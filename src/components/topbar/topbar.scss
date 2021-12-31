@@ -3,11 +3,21 @@
 .topbar {
     width: 100%;
     height: 70px;
-    background-color: $mainColor; 
+    background-color: white; 
+    color: $mainColor;
     // $mainColor is imported from the global class 
                                   
     position: fixed;
     top: 0;
 
     z-index: 2;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex; 
+        // display will be horizontally because it is flexed 
+        align-items: center;
+        // aligns the items centered. Text, Hrefs, Links, Images .. ect 
+        justify-content: space-between;
+    }
 }
