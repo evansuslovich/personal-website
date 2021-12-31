@@ -19,5 +19,14 @@
         align-items: center;
         // aligns the items centered. Text, Hrefs, Links, Images .. ect 
         justify-content: space-between;
+
+        .left{
+            .logo{
+                font-size: 40px;
+                font-weight: 700;
+                text-decoration: dotted;
+                color: inherit;
+            }
+        }
     }
 }
