@@ -1,3 +1,33 @@
-.intro{
-    background-color: lightblue;
+.intro {
+    background-color: white;
+    display: flex;
+
+    .left {
+        flex: 2;
+        overflow: hidden;
+
+
+        .imgContainer {
+            width: 700px;
+            height: 700px;
+            
+            border-radius: 50%;
+            align-items: flex-end;
+            justify-content: center;
+            ;
+
+            img {
+                height: 100%;
+                
+            }
+        }
+
+    }
+
+    .right {
+        flex: 1;
+
+
+    }
+
 }
