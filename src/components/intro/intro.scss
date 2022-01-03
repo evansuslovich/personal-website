@@ -1,3 +1,6 @@
+@import "../../global.scss";
+
+
 .intro {
     background-color: white;
     display: flex;
@@ -8,10 +11,9 @@
 
 
         .imgContainer {
-            background-color: aqua;
+            background-color: white;
             width: 700px;
             height: 700px;
-            background-color: aqua;
             border-radius: 50%;
             display: flex;
             align-items: flex-end;
@@ -25,6 +27,7 @@
     .right {
         flex: 1;
         position: relative;
+
         .wrapper {
             width: 100%;
             height: 100%;
@@ -50,10 +53,18 @@
                 // }
             }
 
-            span{
-                font-size: inherit; 
-                color: crimson; 
+            h3 {
+                font-size: 30px;
+
+                span {
+                    font-size: inherit;
+                    color: $mainColor;
+                }
+
+
             }
+
+
 
         }
 
@@ -62,16 +73,16 @@
             bottom: 10px;
             left: 40%;
 
-            img{
+            img {
                 width: 30px;
-                animation: arrowBlink 2s infinite; 
+                animation: arrowBlink 2s infinite;
             }
 
             @keyframes arrowBlink {
-                100%{
+                100% {
                     opacity: 0;
                 }
-                
+
             }
         }
     }
