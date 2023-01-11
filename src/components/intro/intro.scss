@@ -8,24 +8,6 @@
     .left {
         flex: 1;
         overflow: hidden;
-
-
-        .imgContainer {
-            background-color: white;
-            width: 700px;
-            height: 700px;
-            border-radius: 50%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            float: right;
-
-            img{
-                height: 110%;
-            }
-
-
-        }
     }
 
     .right {
