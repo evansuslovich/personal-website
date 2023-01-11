@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import "./portfolio.scss"
 
 export default function Portfolio() {
     const [avatarURL, setAvatarURL] = useState();
@@ -25,15 +26,17 @@ export default function Portfolio() {
             .then(
                 (result) => {
                     const list = result.map((item) => (
-                        <Card style={{ width: '15rem' }}>
-                            <Card.Body>
-                                <Card.Title>{item.name}</Card.Title>
-                                <Card.Text>
-                                    {item.description}
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <Card.Title>{item.name}</Card.Title>
+                                        <Card.Text>
+                                            {item.description}
+                                        </Card.Text>
+                                        <Button variant="primary">Go to Repository</Button>
+                                    </div>
+                            </div>
+                        </div>
                     ));
                     setRepoData(list);
                 },
@@ -46,17 +49,17 @@ export default function Portfolio() {
 
 
     return (
-        <div className="App w-100 min-vh-100">
-            <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={avatarURL} />
-                <Card.Body>
-                    <Card.Title>{githubUsername}</Card.Title>
-                </Card.Body>
-            </Card>
+
+        <div>
             {repoData}
         </div>
+
     );
 }
+
+
+
+
 
 
 
