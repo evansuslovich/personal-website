@@ -7,27 +7,6 @@ export default function Portfolio() {
     const [githubUsername, setGitHubUsername] = useState();
     const [repoData, setRepoData] = useState();
 
-    async function repoDataURL() {
-        //Get repo data about github user
-        await fetch("https://api.github.com/users/evansuslovich/repos")
-            .then((res) => res.json())
-            .then(
-                (result) => {
-                    const list = result.map((item) => (
-                        <div className="text-center">
-                            <a href={item.svn_url}>
-                                {item.name}
-                            </a>
-                        </div>
-                    ));
-                    setRepoData(list);
-                },
-                (error) => {
-                    console.log(error);
-                }
-            );
-    }
-
     useEffect(() => {
         fetch("https://api.github.com/users/evansuslovich")
             .then((res) => res.json())
@@ -46,11 +25,15 @@ export default function Portfolio() {
             .then(
                 (result) => {
                     const list = result.map((item) => (
-                        <div className="text-center">
-                            <a href={item.svn_url}>
-                                {item.name}
-                            </a>
-                        </div>
+                        <Card style={{ width: '15rem' }}>
+                            <Card.Body>
+                                <Card.Title>{item.name}</Card.Title>
+                                <Card.Text>
+                                    {item.description}
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
                     ));
                     setRepoData(list);
                 },
@@ -58,21 +41,28 @@ export default function Portfolio() {
                     console.log(error);
                 }
             );
-
-
-
     }, []);
+
+
+
     return (
-        <div className="App w-100 min-vh-100 justify-content-center align-items-center d-flex flex-column">
+        <div className="App w-100 min-vh-100">
             <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={avatarURL} />
                 <Card.Body>
                     <Card.Title>{githubUsername}</Card.Title>
-
-                   {repoData}
                 </Card.Body>
             </Card>
+            {repoData}
         </div>
     );
 }
 
+
+
+                // <div>
+                //     <a href={item.svn_url}>
+                //         <h1>{item.name}</h1>
+                //     </a>
+                //     <h5>{item.description}</h5>
+                // </div>
