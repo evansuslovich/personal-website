@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import "./portfolio.scss"
 
 export default function Portfolio() {
@@ -26,16 +24,18 @@ export default function Portfolio() {
             .then(
                 (result) => {
                     const list = result.map((item) => (
-                            <div className="col-sm-6">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <Card.Title>{item.name}</Card.Title>
-                                        <Card.Text>
-                                            {item.description}
-                                        </Card.Text>
-                                        <Button variant="primary">Go to Repository</Button>
-                                    </div>
+                        <div className="card" key={item.name}>
+
+                            <div className="card-header">
+                                <h1 className="repo-title">{item.name}</h1>
                             </div>
+
+                            <div className="card-information">
+                                <h2 className="repo-description">{item.description}</h2>
+                            </div>
+
+                            <button className="card-button" href={item.svn_url} target="_blank">Go to Repository</button>
+
                         </div>
                     ));
                     setRepoData(list);
@@ -50,7 +50,7 @@ export default function Portfolio() {
 
     return (
 
-        <div>
+        <div className="card-display">
             {repoData}
         </div>
 
@@ -61,6 +61,15 @@ export default function Portfolio() {
 
 
 
+{/* <div class="card">
+    <div className="card-body">
+        <Card.Title>{item.name}</Card.Title>
+        <Card.Text>
+            {item.description}
+        </Card.Text>
+        <Button href={item.svn_url} target="_blank" variant="primary">Go to Repository</Button>
+    </div>
+</div> */}
 
 
                 // <div>
