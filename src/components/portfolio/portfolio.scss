@@ -33,11 +33,17 @@
     
     width: 30%;
     margin: 24px;
-
+    
     .card-header {
-        background-color: white;
+        
+        background-color: #06f;
+        
         .repo-title {
+            font-size: 27px;
             overflow: hidden;
+            color: white;
+            margin-top: 20px;
+            
         }
         
         text-align: center;
@@ -45,11 +51,11 @@
     }
     
     .card-information {
-        
+        height: 200px;
         .repo-description {
             overflow: hidden;
+            font-size: 30px;
         }
-        height: 350px;
     }
     
     

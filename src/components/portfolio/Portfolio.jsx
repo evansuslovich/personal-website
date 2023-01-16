@@ -11,7 +11,6 @@ export default function Portfolio() {
             .then((res) => res.json())
             .then(
                 (result) => {
-                    console.log(result);
                     setAvatarURL(result.avatar_url);
                     setGitHubUsername(result.login);
                 },
@@ -23,8 +22,25 @@ export default function Portfolio() {
             .then((res) => res.json())
             .then(
                 (result) => {
+
+                    // result.map((item) => (
+                    //     fetch(item.languages_url)
+                    //         .then((res) => res.json())
+                    //         .then(
+                    //             (url) => {
+                    //                 console.log(url)
+                    //             },
+                    //             (error) => {
+                    //                 console.log(error);
+                    //             }
+                    //         )))
+
+
+
+
                     const list = result.map((item) => (
-                        <div className="card" key={item.name}>
+
+                        < div className="card" key={item.name} >
 
                             <div className="card-header">
                                 <h1 className="repo-title">{item.name}</h1>
@@ -34,10 +50,11 @@ export default function Portfolio() {
                                 <h2 className="repo-description">{item.description}</h2>
                             </div>
 
-                            <button className="card-button" href={item.svn_url} target="_blank">Go to Repository</button>
+                            <a className="card-button" href={item.svn_url} rel="noopener noreferrer" target="_blank">Go to Repository</a>
 
-                        </div>
+                        </div >
                     ));
+
                     setRepoData(list);
                 },
                 (error) => {
@@ -62,19 +79,19 @@ export default function Portfolio() {
 
 
 {/* <div class="card">
-    <div className="card-body">
-        <Card.Title>{item.name}</Card.Title>
-        <Card.Text>
-            {item.description}
-        </Card.Text>
-        <Button href={item.svn_url} target="_blank" variant="primary">Go to Repository</Button>
-    </div>
-</div> */}
+                <div className="card-body">
+                <Card.Title>{item.name}</Card.Title>
+                <Card.Text>
+                {item.description}
+                </Card.Text>
+                <Button href={item.svn_url} target="_blank" variant="primary">Go to Repository</Button>
+                </div>
+            </div> */}
 
 
-                // <div>
-                //     <a href={item.svn_url}>
-                //         <h1>{item.name}</h1>
-                //     </a>
-                //     <h5>{item.description}</h5>
-                // </div>
+            // <div>
+            //     <a href={item.svn_url}>
+            //         <h1>{item.name}</h1>
+            //     </a>
+            //     <h5>{item.description}</h5>
+            // </div>
