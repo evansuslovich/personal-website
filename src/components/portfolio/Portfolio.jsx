@@ -40,7 +40,7 @@ export default function Portfolio() {
 
   return (
 
-    <div className="card-display">
+    <div className="card-display"  id="portfolio">
       {repoData}
     </div>
 
