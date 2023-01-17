@@ -1,27 +1,5 @@
 @import "../../global.scss";
 
-.portfolio{
-    background-color: FFDAC1;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    h1{
-        font-size: 50px;
-    }
-    
-    ul{
-        margin: 10px;
-        padding: 0;
-        list-style: none;
-        display: flex; 
-        li{
-            font-size: 12px; 
-            margin-right: 50px;
-            padding: 0.7;
-        }
-    }
-    
-}
 
 .card-display {
     display:flex;
@@ -35,7 +13,7 @@
     margin: 24px;
     
     .card-header {
-        
+        overflow: hidden;
         background-color: #06f;
         
         .repo-title {
@@ -52,7 +30,7 @@
     
     .card-information {
         height: 200px;
-       
+        
         .repo-description {
             overflow: hidden;
             font-size: 30px;
@@ -101,4 +79,19 @@
         border-color: $mainColor;
         fill: $mainColor;
     }
+}
+
+.language-list {
+    display: flex;
+    justify-content: center;
+}
+
+.language {
+    background-color: lightsalmon;
+    margin-inline: 15px;
+    font-size: 15px;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 20px;
+    
 }

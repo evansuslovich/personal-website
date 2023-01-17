@@ -8,7 +8,7 @@ export default function Intro() {
         init(textRef.current, { 
             showCursor: false,
             backDelay: 1000,
-            strings: ["Person", "Developer", "Designer", "Artist", "Student"],
+            strings: ["Person", "Developer", "Designer", "Painter", "Student"],
         });
 
     

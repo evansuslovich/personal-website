@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+
+import '../../components/portfolio/portfolio.scss'
+
 export default function Languages(props) {
 
 
@@ -14,9 +17,9 @@ export default function Languages(props) {
           Object.keys(languages).forEach(language => result.push(language))
 
           const languageList = result.map((langauge) =>
-            <li key={langauge}>
+            <h1 className="language" key={langauge}>
               {langauge}
-            </li>
+            </h1>
           )
 
           setLanguages(languageList)
@@ -29,7 +32,7 @@ export default function Languages(props) {
   })
 
   return (
-    <div >
+    <div className="language-list">
       {listOfLanguages}
     </div>
   )
