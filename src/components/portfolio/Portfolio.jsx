@@ -1,17 +1,17 @@
+import { ConnectingAirportsOutlined, SignalCellularNoSimOutlined } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import "./portfolio.scss"
 
 export default function Portfolio() {
-    const [avatarURL, setAvatarURL] = useState();
     const [githubUsername, setGitHubUsername] = useState();
     const [repoData, setRepoData] = useState();
+    const [languagesUsed, setLanguages] = useState(); 
 
     useEffect(() => {
         fetch("https://api.github.com/users/evansuslovich")
             .then((res) => res.json())
             .then(
                 (result) => {
-                    setAvatarURL(result.avatar_url);
                     setGitHubUsername(result.login);
                 },
                 (error) => {
@@ -22,28 +22,16 @@ export default function Portfolio() {
             .then((res) => res.json())
             .then(
                 (result) => {
-
-                    // result.map((item) => (
-                    //     fetch(item.languages_url)
-                    //         .then((res) => res.json())
-                    //         .then(
-                    //             (url) => {
-                    //                 console.log(url)
-                    //             },
-                    //             (error) => {
-                    //                 console.log(error);
-                    //             }
-                    //         )))
-
-
-
-
                     const list = result.map((item) => (
 
-                        < div className="card" key={item.name} >
+                        <div className="card" key={item.name} >
 
                             <div className="card-header">
                                 <h1 className="repo-title">{item.name}</h1>
+                          
+                                <div className="card-languages">
+                                    {getLanguages(item)}
+                                </div>
                             </div>
 
                             <div className="card-information">
@@ -63,6 +51,29 @@ export default function Portfolio() {
             );
     }, []);
 
+    function getLanguages(item) {
+        let result = [];
+
+        fetch(item.languages_url)
+            .then((res) => res.json())
+            .then((languages) => {
+                Object.keys(languages).forEach(key => result.push(key))
+
+                const languageList = result.map((langauge) =>
+                    <li key={langauge}>
+                        {langauge}
+                    </li>
+                )
+
+                setLanguages(languageList)
+            },
+                (error) => {
+                    console.log(error);
+                }
+            )
+            console.log(languagesUsed)
+            return languagesUsed;
+    }
 
 
     return (
@@ -77,21 +88,3 @@ export default function Portfolio() {
 
 
 
-
-{/* <div class="card">
-                <div className="card-body">
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>
-                {item.description}
-                </Card.Text>
-                <Button href={item.svn_url} target="_blank" variant="primary">Go to Repository</Button>
-                </div>
-            </div> */}
-
-
-            // <div>
-            //     <a href={item.svn_url}>
-            //         <h1>{item.name}</h1>
-            //     </a>
-            //     <h5>{item.description}</h5>
-            // </div>
