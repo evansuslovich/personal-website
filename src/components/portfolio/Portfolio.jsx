@@ -12,7 +12,7 @@ export default function Portfolio() {
       .then(
         (result) => {
 
-          const list = result.map((item, index) => (
+          const list = result.map((item) => (
             <div className="card" key={item.name} >
               <div className="card-header">
                 <h1 className="repo-title">{item.name}</h1>
