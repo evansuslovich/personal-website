@@ -20,14 +20,19 @@ export default function Contact() {
 
     return (
         <div className="contact" id="contact">
-            <form ref={form} onSubmit={sendEmail}>
+
+            <form ref={form} onSubmit={sendEmail} className="form">
                 <label>Name</label>
-                <input type="text" name="user_name" />
+                <input className="name" type="text" name="user_name" placeholder="Name" />
+                
                 <label>Email</label>
-                <input type="email" name="user_email" />
+
+                <input className="email" type="email" name="user_email" placeholder="Email" />
+                
                 <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
+                <input className="message" type="text" name="message" placeholder="Message" />
+                
+                <input className="button" type="submit" value="Send" />
             </form>
         </div>
     );
