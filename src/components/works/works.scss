@@ -1,16 +1,42 @@
 .works {
-    background-color: #C7CEEA;
+    max-height: max-content;
     
     h1 {
         text-align: center;
     }
-
+    
     .paintings {
-        
+        .card {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+            
+            .painting-container {
+                display: flex;
+                justify-content: center;
+                
+                .painting {
+                    width: 35%;
+                    height: 35%;
+                }
+            }
 
-        .painting {
+            h1 {
+                font-size: 45px;
+                font-style: italic;
+                overflow: hidden;
+            }
 
+             h2 {
+                font-size: 20px;
+                overflow: hidden;
+            }
         }
     }
+    
 }
 
+.works::-webkit-scrollbar {
+  display: none;
+}
