@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Languages from "./Languages";
+import PortfolioIntro from "./PortfolioIntro";
 import "./portfolio.scss"
 
 export default function Portfolio() {
@@ -39,11 +40,13 @@ export default function Portfolio() {
 
 
   return (
+    <div className="card-display" id="portfolio">
 
-    <div className="card-display"  id="portfolio">
+      <PortfolioIntro />
+
       {repoData}
-    </div>
 
+    </div>
   );
 }
 
