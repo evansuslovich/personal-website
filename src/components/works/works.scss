@@ -1,5 +1,5 @@
 .works {
-    min-height: min-content;
+    max-height: max-content;
     
     h1 {
         text-align: center;
@@ -37,3 +37,6 @@
     
 }
 
+.works::-webkit-scrollbar {
+  display: none;
+}
