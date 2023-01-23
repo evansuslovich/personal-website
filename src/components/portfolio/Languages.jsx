@@ -29,7 +29,7 @@ export default function Languages(props) {
           console.log(error);
         }
       )
-  })
+  }, [props.props])
 
   return (
     <div className="language-list">
