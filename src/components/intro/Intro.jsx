@@ -25,10 +25,7 @@ export default function Intro() {
                 <a href="#portfolio">
                     <img src="assets/down.png" alt="" />
                 </a>
-
-
             </div>
-
         </div>
     )
 }
