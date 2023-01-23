@@ -1,23 +1,36 @@
 .works {
+    min-height: min-content;
     
     h1 {
         text-align: center;
     }
     
     .paintings {
-        margin-top: 100px;
-        
-        .painting-card {
-            display: flex;
-            justify-content: center;
-            
+        .card {
             height: 100%;
             width: 100%;
+            text-align: center;
+            margin-top: 100px;
+            
+            .painting-container {
+                display: flex;
+                justify-content: center;
+                
+                .painting {
+                    width: 35%;
+                    height: 35%;
+                }
+            }
 
-            margin: 10px;
-            .painting {
-                width: 35%;
-                height: 35%;
+            h1 {
+                font-size: 45px;
+                font-style: italic;
+                overflow: hidden;
+            }
+
+             h2 {
+                font-size: 20px;
+                overflow: hidden;
             }
         }
     }
