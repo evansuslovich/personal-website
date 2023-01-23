@@ -5,12 +5,13 @@
     display:flex;
     flex-flow:row wrap;
     align-items: baseline;
+    background-color: rgb(246, 221, 219);
 }
 
 .card {
-    
     width: 30%;
     margin: 1.66666666%;
+    border: 0px;
     
     .card-header {
         overflow: hidden;
