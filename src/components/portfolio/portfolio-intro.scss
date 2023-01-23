@@ -1,0 +1,14 @@
+.portfolio-intro {
+  background-color: black;
+  background-image: radial-gradient(
+  rgba(0, 150, 0, 0.75), black 120%
+  );
+ 
+  h1 {
+    font-size: 200px;
+    text-shadow: 0 0 5px #C8C8C8;
+    color: white;
+    font-family: 1.3rem Inconsolata, monospace;
+  }
+}
+
