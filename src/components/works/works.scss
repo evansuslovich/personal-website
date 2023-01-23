@@ -6,29 +6,32 @@
     }
     
     .paintings {
+        margin-right: 5%;
+        
         .card {
             height: 100%;
             width: 100%;
             text-align: center;
             margin-top: 100px;
             
+            
             .painting-container {
                 display: flex;
                 justify-content: center;
                 
                 .painting {
-                    width: 35%;
-                    height: 35%;
+                    width: 50%;
+                    height: 50%;
                 }
             }
-
+            
             h1 {
                 font-size: 45px;
                 font-style: italic;
                 overflow: hidden;
             }
-
-             h2 {
+            
+            h2 {
                 font-size: 20px;
                 overflow: hidden;
             }
@@ -38,5 +41,5 @@
 }
 
 .works::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
