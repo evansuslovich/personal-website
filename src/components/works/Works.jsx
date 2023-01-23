@@ -1,12 +1,14 @@
 import "./works.scss"
+import WorksIntro from "./WorksIntro";
 
 export default function Works() {
     return (
         <div className="works" id="works">
 
+            <WorksIntro />
 
             <div className="paintings">
-                
+
                 <div className="card">
                     <h1>Emotions</h1>
                     <h2>2020</h2>
@@ -33,7 +35,7 @@ export default function Works() {
                 </div>
 
                 <div className="card">
-                    <h1>The Structured Day <br/> and  <br/> Surreal Dream</h1>
+                    <h1>The Structured Day <br /> and  <br /> Surreal Dream</h1>
                     <h2>2022</h2>
                     <div className="painting-container">
                         <img src="paintings/art_4.jpeg" className="painting" alt="" />
