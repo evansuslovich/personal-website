@@ -5,7 +5,7 @@ export default function WorksIntro() {
   return (
     <div className="works-intro">
       <div className="text">
-        <h1>My Personal Projects!</h1>
+        <h1>Art Projects!</h1>
       </div>
     </div>
   )
