@@ -1,16 +1,26 @@
 .works {
-    background-color: #C7CEEA;
     
     h1 {
         text-align: center;
     }
-
+    
     .paintings {
+        margin-top: 100px;
         
+        .painting-card {
+            display: flex;
+            justify-content: center;
+            
+            height: 100%;
+            width: 100%;
 
-        .painting {
-
+            margin: 10px;
+            .painting {
+                width: 35%;
+                height: 35%;
+            }
         }
     }
+    
 }
 
