@@ -41,12 +41,11 @@
                 margin-left: 30px;
                 
                 
-                
                 .icon {
                     font-size: 18px;
                     margin-right: 5px;
-                }
-                
+                } 
+               
                 span {
                     font-size: 15px;
                     font-weight: 500;
@@ -77,7 +76,6 @@
     &.active {
         background-color: $mainColor;
         color: white;
-        
         
         .hamburger {
             span {
