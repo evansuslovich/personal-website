@@ -9,5 +9,4 @@ export default function PortfolioIntro() {
       </div>
     </div>
   )
-
 }
