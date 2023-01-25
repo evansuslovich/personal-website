@@ -7,12 +7,18 @@
     
     .paintings {
         margin-right: 2.5%;
+
         
         .card {
             height: 100%;
             width: 100%;
             text-align: center;
             margin-top: 100px;
+
+            .dateAndSold {
+                display: flex;
+                justify-content: center;
+            }
             
             
             .painting-container {
@@ -20,20 +26,28 @@
                 justify-content: center;
                 
                 .painting {
-                    width: 50%;
-                    height: 50%;
+                    width: 40%;
+                    height: 40%;
                 }
             }
             
             h1 {
                 font-size: 45px;
                 font-style: italic;
+                font-weight: 800;
                 overflow: hidden;
             }
             
             h2 {
                 font-size: 20px;
                 overflow: hidden;
+            }
+
+            h3 {
+                font-size: 20px;
+                color: red;
+                font-weight: 900;
+                padding-left: 10px;
             }
         }
     }
