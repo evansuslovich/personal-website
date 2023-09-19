@@ -76,6 +76,29 @@ export default function Works() {
                     </div>
                 </div>
 
+                <div className="card">
+                    <h1>Don't Look Inside</h1>
+                    <h2>2023</h2>
+                    <h3>Sold - Providence, RI</h3>
+                    <div className="painting-container">
+                        <img src="paintings/art_8.jpg" className="painting" alt="" />
+                    </div>
+                </div>
+
+                <div className="card">
+                    <h1>Yearning</h1>
+                    <h2>2023</h2>
+                    <h3>Sold - Providence, RI</h3>
+                    <div className="painting-container">
+                        <img src="paintings/art_9.jpeg" className="painting" alt="" />
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <br />
+                <br />
+
             </div>
         </div >
     )
