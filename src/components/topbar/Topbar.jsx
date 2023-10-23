@@ -17,8 +17,8 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                         <span>(401)-428-4140</span>
                     </div>
                     <div className="itemContainer">
-                        <EmailIcon className="icon" onClick={() => window.open('mailto:evansuslovichjacob@gmail.com@gmail.com')} />
-                        <span onClick={() => window.open('mailto:evansuslovichjacob@gmail.com@gmail.com')}>evanjacobsuslovich@gmail.com</span>
+                        <EmailIcon className="icon" onClick={() => window.open('mailto:evansuslovichjacob@gmail.com')} />
+                        <span onClick={() => window.open('mailto:evansuslovichjacob@gmail.com')}>evanjacobsuslovich@gmail.com</span>
                     </div>
                     <div className="itemContainer">
                         <LinkedInIcon className="icon" onClick={() => window.open('https://www.linkedin.com/in/evansuslovich/')} />
