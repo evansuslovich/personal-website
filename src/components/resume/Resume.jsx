@@ -102,12 +102,23 @@ const Bullet = ({ point, subBullets = [] }) => (
   </ul>
 );
 
+const ResumeDownload = () => (
+  <a
+    className="resume-download"
+    href="/resume.pdf"
+    download="Evan_Suslovich_Resume.pdf"
+  >
+    Download Resume
+  </a>
+);
+
 export default function Resume() {
   const [show, setShow] = useState(true);
 
   return (
     <div className="resume" id="resume">
       <ResumeIntro setShow={setShow} show={show} />
+      <ResumeDownload />
       {show && (
         <div className="resume-content">
           <Section title="Education">

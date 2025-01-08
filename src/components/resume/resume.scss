@@ -1,7 +1,30 @@
 @import "../../global.scss";
 
-.resume-content {
 
+.resume-download {
+  padding: 10px 20px;
+  margin-left: 20px;
+  background-color: #06f;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.resume-download:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05);
+  color: white;
+}
+
+.resume-download:active {
+  transform: scale(0.95);
+}
+
+.resume-content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -76,6 +99,7 @@
   font-size: 1.5rem;
   color: #333;
   font-weight: bold;
+  overflow: inherit;
 }
 
 .section hr {
