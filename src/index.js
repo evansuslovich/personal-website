@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-import { SnackbarProvider } from 'notistack';
-
+import { SnackbarProvider } from "notistack";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,5 +10,5 @@ ReactDOM.render(
       <App />
     </SnackbarProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
