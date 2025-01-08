@@ -1,5 +1,5 @@
 .works {
-    max-height: max-content;
+    max-height: min-content;
     
     h1 {
         text-align: center;
@@ -14,6 +14,7 @@
             width: 100%;
             text-align: center;
             margin-top: 100px;
+            border: none;
 
             .dateAndSold {
                 display: flex;

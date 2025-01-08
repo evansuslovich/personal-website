@@ -1,49 +1,66 @@
 @import "../../global.scss";
 
 
+.portfolio {
+
 .card-display {
     display:flex;
     flex-flow:row wrap;
     align-items: baseline;
-    // background-color: rgb(247, 236, 235);
-}
+
 
 .card {
+    height: 60vh;
     width: 30%;
-    margin: 1.66666666%;
-    border-width: 0px;
-    
+    margin: 1.5%;
     
     .card-header {
         overflow: hidden;
         background-color: #06f;
         text-align: center;
-        height: 100px; 
-        border-width: 0px;
+        height: 30%;
         
         .repo-title {
+            height: 35%;
             font-size: 27px;
             overflow: hidden;
             color: white;
             margin-top: 20px;
             
         }
-        
+
+        .language-list {
+            display: flex;
+            flex-wrap: wrap; 
+            overflow-y: scroll;
+            justify-content: center;
+            gap: 10px; 
+            max-height: 50%; 
+
+            .language {
+                background-color: lightsalmon;
+                margin: 5px;
+                font-size: 15px;
+                padding: 5px 8px;
+                border-radius: 20px;
+                font-weight: bold;
+                white-space: nowrap; /* Prevents text from breaking within tags */
+            }
+        }
     }
     
     .card-information {
-        height: 200px;
+        height: 60%;
         border: 2px solid #06f;
         
         .repo-description {
             margin: 2px;
             overflow: hidden;
-            font-size: 30px;
+            font-size: 25px;
         }
     }
     
     
-    /* CSS */
     .card-button {
         align-items: center;
         background-color: #06f;
@@ -56,7 +73,7 @@
         font-family: Inter,sans-serif;
         font-size: 16px;
         font-weight: 600;
-        height: 48px;
+        height: 10%;
         justify-content: center;
         letter-spacing: -.8px;
         line-height: 24px;
@@ -84,22 +101,8 @@
     }
 }
 
-.language-list {
-    display: flex;
-    justify-content: center;
-    margin-top: -2px;
-    
-    
-    .language {
-        background-color: lightsalmon;
-        margin-inline: 15px;
-        font-size: 15px;
-        overflow: hidden;
-        padding: 5px;
-        border-radius: 20px;
-        font-weight: bolder;
-    }
-}
 .portfolio::-webkit-scrollbar{
     display:none;
+}
+} 
 }

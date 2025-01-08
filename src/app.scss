@@ -1,7 +1,7 @@
-.app{
+.app {
     height: 100vh;
     
-    .sections{
+    .sections {
         width: 100%;
         height: calc(100vh - 70px);
         position: relative;
@@ -12,9 +12,7 @@
         // showing that the scenario has changed 
 
         scroll-snap-type: y mandatory;
-       
         scrollbar-width: none;
-
 
         &::-webkit-scrollbar{
             display:none;
