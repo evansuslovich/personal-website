@@ -10,12 +10,13 @@ export default function Portfolio() {
 
   useEffect(() => {
     const createRepoCards = (repos) => {
+      console.log(repos);
       return repos.map((repo) => (
         <div className="card" key={repo.name}>
           <div className="card-header">
             <h1 className="repo-title">{repo.name}</h1>
 
-            <Languages props={repo.language_list} />
+            <Languages props={process.env.NODE_ENV === "production" ? repo.languages_url : repo.language_list} />
           </div>
 
           <div className="card-information">
@@ -39,7 +40,7 @@ export default function Portfolio() {
         .then((res) => res.json())
         .then(
           (repos) => setRepoData(createRepoCards(repos)),
-          (error) => console.log(error),
+          (error) => console.log(error)
         );
     } else {
       // testing and development
