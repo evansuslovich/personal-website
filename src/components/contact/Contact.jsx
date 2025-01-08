@@ -11,12 +11,24 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (
+      !process.env.REACT_APP_EJS_SERVICE_ID ||
+      !process.env.REACT_APP_EJS_TEMPLATE_ID ||
+      !process.env.REACT_APP_EJS_PUBLIC_KEY
+    ) {
+      enqueueSnackbar(
+        "Environment variables are undefined for sending emails",
+        { variant: "error" }
+      );
+      return;
+    }
+
     emailjs
       .sendForm(
         process.env.REACT_APP_EJS_SERVICE_ID,
         process.env.REACT_APP_EJS_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_EJS_PUBLIC_KEY,
+        process.env.REACT_APP_EJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -24,7 +36,7 @@ export default function Contact() {
         },
         (error) => {
           enqueueSnackbar(error.text, { variant: "error" });
-        },
+        }
       );
   };
 
