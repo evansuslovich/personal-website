@@ -26,7 +26,7 @@ export default function Works() {
           </div>
 
           <div className="card">
-            <h1>Conformity</h1>
+            <h1>Merge</h1>
             <h2>2021</h2>
             <h3>Sold - Providence, RI</h3>
 
@@ -81,19 +81,6 @@ export default function Works() {
           </div>
 
           <div className="card">
-            <h1>Oil on Goyard</h1>
-            <h2>2022</h2>
-            <h3>Sold - New York City, NY</h3>
-            <div className="painting-container">
-              <img
-                src="assets/paintings/art_6.jpg"
-                className="painting"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div className="card">
             <h1>Projection</h1>
             <h2>2022</h2>
             <h3>Sold - Boston, MA</h3>
@@ -128,6 +115,43 @@ export default function Works() {
                 src="assets/paintings/art_9.jpeg"
                 className="painting"
                 alt=""
+              />
+            </div>
+          </div>
+
+          <div className="card">
+            <h1>Untitled</h1>
+            <h2>2023</h2>
+            <h3>Sold - Boston, MA</h3>
+            <div className="painting-container">
+              <img
+                src="assets/paintings/art_10.jpeg"
+                className="painting"
+                alt="Untitled"
+              />
+            </div>
+          </div>
+
+          <div className="card">
+            <h1>Doves</h1>
+            <h2>2024</h2>
+            <div className="painting-container">
+              <img
+                src="assets/paintings/art_12.jpeg"
+                className="painting"
+                alt="Untitled"
+              />
+            </div>
+          </div>
+
+          <div className="card">
+            <h1>Organs of the Overseer</h1>
+            <h2>2024</h2>
+            <div className="painting-container">
+              <img
+                src="assets/paintings/art_11.jpeg"
+                className="painting"
+                alt="Untitled"
               />
             </div>
           </div>
