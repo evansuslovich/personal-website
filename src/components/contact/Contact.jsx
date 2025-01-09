@@ -18,7 +18,7 @@ export default function Contact() {
     ) {
       enqueueSnackbar(
         "Environment variables are undefined for sending emails",
-        { variant: "error" }
+        { variant: "error", autoHideDuration: 3000 }
       );
       return;
     }
@@ -32,10 +32,16 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          enqueueSnackbar("Email Sent", { variant: "success" });
+          enqueueSnackbar("Email Sent", {
+            variant: "success",
+            autoHideDuration: 3000,
+          });
         },
         (error) => {
-          enqueueSnackbar(error.text, { variant: "error" });
+          enqueueSnackbar(error.text, {
+            variant: "error",
+            autoHideDuration: 3000,
+          });
         }
       );
   };
