@@ -46,15 +46,17 @@
       transform 0.2s,
       box-shadow 0.2s;
     overflow: hidden;
+    font-weight: 900;
+
 
     h3 {
-      font-weight: 900;
+      font-weight: inherit;
       margin: 0;
       font-size: 1.25rem;
       overflow: hidden;
     }
     p {
-      font-weight: 900;
+      font-weight: inherit;
       margin: 8px 0 0;
       font-size: 1rem;
       color: #555;
@@ -67,11 +69,12 @@
     }
 
     h3:first-child {
-      font-weight: bold;
+      font-weight: inherit;
+
     }
 
     h3:last-child {
-      font-weight: normal;
+      font-weight: inherit;
       color: #777;
     }
   }
@@ -89,8 +92,8 @@
     margin-bottom: 24px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition:
-      transform 0.2s,
-      box-shadow 0.2s;
+    transform 0.2s,
+    box-shadow 0.2s;
     text-align: left;
     overflow: hidden;
   }
@@ -104,7 +107,7 @@
     margin: 0 0 12px;
     font-size: 1.5rem;
     color: #333;
-    font-weight: bold;
+    font-weight: 900;
     overflow: inherit;
   }
 
@@ -130,10 +133,12 @@
 
     li {
       list-style-position: inside;
+      font-weight: 900;
     }
 
     .subBullet {
       list-style-type: circle;
+      font-weight: 900;
       margin-left: 20px;
       margin-top: 10px;
     }
