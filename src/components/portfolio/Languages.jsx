@@ -24,7 +24,7 @@ export default function Languages({ props }) {
           },
           (error) => {
             console.log(error);
-          }
+          },
         );
     } else {
       const languageList = (

@@ -1,60 +1,57 @@
 .works {
-    max-height: min-content;
-    
-    h1 {
-        text-align: center;
-    }
-    
-    .paintings {
-        margin-right: 2.5%;
+  max-height: min-content;
 
-        
-        .card {
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            margin-top: 100px;
-            border: none;
+  h1 {
+    text-align: center;
+  }
 
-            .dateAndSold {
-                display: flex;
-                justify-content: center;
-            }
-            
-            
-            .painting-container {
-                display: flex;
-                justify-content: center;
-                
-                .painting {
-                    width: 40%;
-                    height: 40%;
-                }
-            }
-            
-            h1 {
-                font-size: 45px;
-                font-style: italic;
-                font-weight: 800;
-                overflow: hidden;
-            }
-            
-            h2 {
-                font-size: 20px;
-                overflow: hidden;
-            }
+  .paintings {
+    margin-right: 2.5%;
 
-            h3 {
-                font-size: 20px;
-                color: red;
-                font-weight: 900;
-                padding-left: 10px;
-            }
+    .card {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      margin-top: 100px;
+      border: none;
+
+      .dateAndSold {
+        display: flex;
+        justify-content: center;
+      }
+
+      .painting-container {
+        display: flex;
+        justify-content: center;
+
+        .painting {
+          width: 40%;
+          height: 40%;
         }
+      }
+
+      h1 {
+        font-size: 45px;
+        font-style: italic;
+        font-weight: 800;
+        overflow: hidden;
+      }
+
+      h2 {
+        font-size: 20px;
+        overflow: hidden;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: red;
+        font-weight: 900;
+        padding-left: 10px;
+      }
     }
-    
+  }
 }
 
 .works::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

@@ -18,7 +18,7 @@ export default function Contact() {
     ) {
       enqueueSnackbar(
         "Environment variables are undefined for sending emails",
-        { variant: "error", autoHideDuration: 3000 }
+        { variant: "error", autoHideDuration: 3000 },
       );
       return;
     }
@@ -28,7 +28,7 @@ export default function Contact() {
         process.env.REACT_APP_EJS_SERVICE_ID,
         process.env.REACT_APP_EJS_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_EJS_PUBLIC_KEY
+        process.env.REACT_APP_EJS_PUBLIC_KEY,
       )
       .then(
         (result) => {
@@ -42,7 +42,7 @@ export default function Contact() {
             variant: "error",
             autoHideDuration: 3000,
           });
-        }
+        },
       );
   };
 

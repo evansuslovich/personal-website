@@ -1,22 +1,21 @@
 .resume-intro {
-    overflow: hidden;
-  
-    width: 100%;
-  
-    .text {
-      margin-top: 3%;
-      margin-bottom: 3%;
-      height: 70%;
-      background-color:#06f;
-      display: flex;
-      justify-content: space-between; 
-      padding: 1%;
-      
-      h1 {
-        color: white;
-        overflow: hidden;
-        font-size: 100px;
-      }
-  
+  overflow: hidden;
+
+  width: 100%;
+
+  .text {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 70%;
+    background-color: #06f;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+
+    h1 {
+      color: white;
+      overflow: hidden;
+      font-size: 100px;
     }
   }
+}

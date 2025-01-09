@@ -1,67 +1,62 @@
 @import "../../global.scss";
 
-
 .portfolio {
-
-.card-display {
-    display:flex;
-    flex-flow:row wrap;
+  .card-display {
+    display: flex;
+    flex-flow: row wrap;
     align-items: baseline;
 
+    .card {
+      height: 60vh;
+      width: 30%;
+      margin: 1.5%;
 
-.card {
-    height: 60vh;
-    width: 30%;
-    margin: 1.5%;
-    
-    .card-header {
+      .card-header {
         overflow: hidden;
         background-color: #06f;
         text-align: center;
         height: 30%;
-        
+
         .repo-title {
-            height: 35%;
-            font-size: 27px;
-            overflow: hidden;
-            color: white;
-            margin-top: 20px;
-            
+          height: 35%;
+          font-size: 27px;
+          overflow: hidden;
+          color: white;
+          margin-top: 20px;
         }
 
         .language-list {
-            padding-right: 20px;
-            display: flex;
-            flex-wrap: wrap; 
-            overflow-y: scroll;
-            justify-content: center;
-            gap: 5px; 
-            max-height: 50%;      
-                   
-            .language {
-                background-color: lightsalmon;
-                margin: 5px;
-                font-size: 15px;
-                padding: 5px 8px;
-                border-radius: 20px;
-                font-weight: bold;
-            }
+          padding-right: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          overflow-y: scroll;
+          justify-content: center;
+          gap: 5px;
+          max-height: 50%;
+
+          .language {
+            background-color: lightsalmon;
+            margin: 5px;
+            font-size: 15px;
+            padding: 5px 8px;
+            border-radius: 20px;
+            font-weight: bold;
+          }
         }
-    }
-    
-    .card-information {
+      }
+
+      .card-information {
         height: 60%;
         border: 2px solid #06f;
-        
+
         .repo-description {
-            margin: 2px;
-            overflow: hidden;
-            font-size: 25px;
+          margin: 2px;
+          overflow: hidden;
+          font-size: 25px;
         }
-    }
-    
-    
-    .card-button {
+      }
+
+      .card-button {
         align-items: center;
         background-color: #06f;
         border: 2px solid #06f;
@@ -70,39 +65,39 @@
         cursor: pointer;
         display: inline-flex;
         fill: #000;
-        font-family: Inter,sans-serif;
+        font-family: Inter, sans-serif;
         font-size: 16px;
         font-weight: 600;
         height: 10%;
         justify-content: center;
-        letter-spacing: -.8px;
+        letter-spacing: -0.8px;
         line-height: 24px;
         min-width: 140px;
         outline: 0;
         padding: 0 17px;
         text-align: center;
         text-decoration: none;
-        transition: all .3s;
+        transition: all 0.3s;
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-    }
-    
-    .card-button:hover {
+      }
+
+      .card-button:hover {
         background-color: $mainColor;
         border-color: $mainColor;
         fill: #06f;
-    }
-    
-    .card-button:active {
+      }
+
+      .card-button:active {
         background-color: $mainColor;
         border-color: $mainColor;
         fill: $mainColor;
+      }
     }
-}
 
-.portfolio::-webkit-scrollbar{
-    display:none;
-}
-} 
+    .portfolio::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

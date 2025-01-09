@@ -1,86 +1,79 @@
 @import "../../global.scss";
 
+.contact {
+  background-color: #b5ead7;
+  overflow: hidden;
 
-.contact{
-    
-    background-color: #B5EAD7;
+  h1 {
+    font-size: 100px;
     overflow: hidden;
-    
-    h1 {
-        font-size: 100px;
-        overflow: hidden;
-        text-align: center;
+    text-align: center;
+    margin: 1%;
+  }
+
+  .contact-me {
+    text-align: center;
+
+    .form {
+      height: 100%;
+      width: 50%;
+      box-sizing: border-box;
+      display: inline-block;
+
+      .name {
+        width: 32%;
+        height: 48px;
+        border: 2px solid #0fb075;
+        margin-inline: 3%;
+        margin-bottom: 1%;
+      }
+      .personal {
+        margin: 1px;
+        width: 70%;
+        height: 48px;
+        border: 2px solid #0fb075;
         margin: 1%;
+      }
+
+      .message {
+        width: 70%;
+        height: 200px;
+        border: 2px solid #0fb075;
+        margin: 1%;
+      }
+
+      .button {
+        width: 70%;
+        align-items: center;
+        background-color: #0fb075;
+        border: 2px solid #010f0a;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        fill: #000;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        height: 48px;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+        min-width: 140px;
+        padding: 0 17px;
+        transition: all 0.3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button:active {
+        background-color: #010f0a;
+        border-color: #010f0a;
+      }
+
+      .button:hover {
+        background-color: #114f3a;
+        border-color: #000000;
+      }
     }
-    
-    
-    
-    .contact-me {
-        text-align: center;
-        
-        .form {
-            height: 100%;
-            width: 50%;
-            box-sizing: border-box;
-            display: inline-block;
-            
-            .name {
-                width: 32%;
-                height: 48px;
-                border: 2px solid #0fb075;
-                margin-inline: 3%;
-                margin-bottom: 1%;
-                
-            }
-            .personal {
-                margin: 1px;
-                width: 70%;
-                height: 48px;
-                border: 2px solid #0fb075;
-                margin: 1%;
-            }
-            
-            .message {
-                width: 70%;
-                height: 200px;
-                border: 2px solid #0fb075;
-                margin: 1%;
-            }
-            
-            .button {
-                width: 70%;
-                align-items: center;
-                background-color: #0fb075;
-                border: 2px solid #010f0a;
-                box-sizing: border-box;
-                color: #fff;
-                cursor: pointer;
-                fill: #000;
-                font-family: Inter,sans-serif;
-                font-size: 16px;
-                font-weight: 600;
-                height: 48px;
-                letter-spacing: .5px;
-                line-height: 24px;
-                min-width: 140px;
-                padding: 0 17px;
-                transition: all .3s;
-                user-select: none;
-                -webkit-user-select: none;
-                touch-action: manipulation;
-            }
-            
-            
-            .button:active {
-                background-color: #010f0a;
-                border-color: #010f0a;
-            }
-            
-            .button:hover {
-                background-color: #114f3a;
-                border-color: #000000;
-            }
-            
-        }
-    }
+  }
 }

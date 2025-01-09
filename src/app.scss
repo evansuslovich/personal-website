@@ -1,28 +1,27 @@
 .app {
-    height: 100vh;
-    
-    .sections {
-        width: 100%;
-        height: calc(100vh - 70px);
-        position: relative;
-        top: 70px;
-        scroll-behavior: smooth; 
-        // smooth behavior "smooth" makes it so when the topbar href is clicked
-        // it doesn't instantly move the user to the component; instead; it smoothly goes
-        // showing that the scenario has changed 
+  height: 100vh;
 
-        scroll-snap-type: y mandatory;
-        scrollbar-width: none;
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    // smooth behavior "smooth" makes it so when the topbar href is clicked
+    // it doesn't instantly move the user to the component; instead; it smoothly goes
+    // showing that the scenario has changed
 
-        &::-webkit-scrollbar{
-            display:none;
-        }
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
 
-        > *{
-            width: 100vw;
-            min-height: calc(100vh - 70px);
-            scroll-snap-align: start;
-        }
-       
+    &::-webkit-scrollbar {
+      display: none;
     }
+
+    > * {
+      width: 100vw;
+      min-height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
 }
