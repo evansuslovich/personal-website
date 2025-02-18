@@ -70,9 +70,13 @@ const EducationItem = ({
             ? `| ${location}`
             : ""}
       </h3>
-      <h3>
-        {startDate} - {endDate}
-      </h3>
+      {startDate ? (
+        <h3>
+          {startDate} - {endDate}
+        </h3>
+      ) : (
+        <h3>{endDate}</h3>
+      )}
     </div>
     <div>
       <h3>{details}</h3>
@@ -87,18 +91,9 @@ const EducationItem = ({
   </div>
 );
 
-const Bullet = ({ point, subBullets = [] }) => (
+const Bullet = ({ point }) => (
   <ul className="bullet">
     <li>{point}</li>
-    {subBullets.length > 0 && (
-      <ul>
-        {subBullets.map((subText, index) => (
-          <li className="subBullet" key={index}>
-            {subText}
-          </li>
-        ))}
-      </ul>
-    )}
   </ul>
 );
 
@@ -128,11 +123,10 @@ export default function Resume() {
                 location="Boston, MA"
                 details="Candidate for B.S in Computer Science - Concentration in Artificial Intelligence, Minor in Math"
                 gpa="3.5/4.0"
-                startDate="September 2021"
-                endDate="Present"
-                relevantCoursework="Object-Oriented Design | Algorithms and Data | Computer Systems | Software Engineering |
-                            Reinforcement Learning | Machine Learning and Data Mining I | Artificial Intelligence
-                            Linear Algebra | Probability and Statistics | Calculus II | Discrete Mathematics"
+                endDate="Expected May 2025"
+                relevantCoursework="Reinforcement Learning | Research in Natural Language Processing | Artificial Intelligence 
+                Object-Oriented Design | Algorithms and Data | Computer Systems | Software Engineering
+                Machine Learning and Data Mining | Linear Algebra | Probability and Statistics | Discrete Mathematics "
                 leadershipAndActivities=" Founder and President of the Northeastern Art and Creative Therapy Club"
               />
             </Section>
@@ -145,9 +139,11 @@ export default function Resume() {
                 startDate="June 2024"
                 endDate="August 2024"
                 details={[
-                  <Bullet point="Developed 152 integration tests in Playwright to validate API functionalities and enhance system reliability" />,
-                  <Bullet point="Streamlined API testing by abstracting 8 Json files into 3 models promoting object-oriented design practices" />,
-                  <Bullet point="Closed 13 tickets to automate testing for the SensiWatch platform, enhancing supply chain performance" />,
+                  <Bullet point="Assisted in API test automation by writing 152 integration tests for RESTful API endpoints using Playwright" />,
+                  <Bullet point="Designed positive and negative test validations for endpoints across internal and external .NET API microservices" />,
+                  <Bullet point="Validated endpoints and payloads using Postman to ensure functionality of legacy ReadyAPI tests" />,
+                  <Bullet point="Streamlined testing by restructuring verbose JSON payloads into object-oriented data models" />,
+                  <Bullet point="Created documentation detailing quality assurance process to reduce onboarding time for new team members" />,
                 ]}
               />
               <ListItem
@@ -157,11 +153,12 @@ export default function Resume() {
                 startDate="January 2024"
                 endDate="June 2024"
                 details={[
-                  <Bullet point="Aligned React UI with Figma board, improved data presentation, and refactored frontend typing for code quality" />,
+                  <Bullet point="Aligned React UI with Figma board, improved data presentation, and refactored Typescript files for code quality" />,
+                  <Bullet point="Optimized biomedical metadata queries to GCP and Microsoft Azure via Java Spring Boot" />,
                   <Bullet point="Iterated on the Spring Boot backend to optimize biomedical metadata queries hosted on Google Cloud and Azure" />,
-                  <Bullet point="Redesigned the cloud query building process with a builder design pattern removing the need for 7 constructors" />,
-                  <Bullet point="Developed a Python script to automate the API profiling process, enabling data-driven optimization for performance" />,
-                  <Bullet point="Contributed to Terra.Bio by completing 27 tickets, enabling the creation of cohorts using clinical and genomic variables, enhancing data accessibility and precision for biomedical research workflows" />,
+                  <Bullet point="Refactored legacy cloud query workflow to streamline and remove years of technical debt" />,
+                  <Bullet point="Automated the API profiling process to facilitate data-driven performance optimization with Python scripting" />,
+                  <Bullet point="Improved custom cohort creation, data accessibility, and biomedical research workflows by closing 27 PRs" />,
                 ]}
               />
               <ListItem
@@ -174,19 +171,8 @@ export default function Resume() {
                   <Bullet point="Implemented Jest framework in React frontend with 287 tests across 16 functions ensuring robust code quality" />,
                   <Bullet point="Resolved 40% of frontend crashes with a solution for undefined behavior with icons in Material-UI components" />,
                   <Bullet point="Developed a background task for concurrent large data downloads and automated zipping and emailing" />,
-                  <Bullet
-                    point="Identified weak password validation on registration and implemented custom Django password validation"
-                    subBullets={[
-                      "Integrated end-to-end password validation displaying errors to users and disabling the 'register' button",
-                    ]}
-                  />,
-                  <Bullet
-                    point="Launched a multi-layered system heuristic for tab naming conventions enhancing 80% of multi-query searches"
-                    subBullets={[
-                      "Added manual title editing and customizable tab borders via a drop-down color menu",
-                    ]}
-                  />,
-                  <Bullet point="Total contributions consist of 85+ pull requests with 750+ commits for 20,000+ users" />,
+                  <Bullet point="Identified weak password validation on registration and implemented custom password validation with Django" />,
+                  <Bullet point="Created a multi-layered system heuristic for tab naming conventions enhancing 80% of multi-query searches" />,
                 ]}
               />
 
@@ -198,21 +184,25 @@ export default function Resume() {
                 endDate="May 2023"
                 details={[
                   <Bullet point="Initialized full-stack application with a Django backend and React frontend" />,
-                  <Bullet point="Streamlined API development with RTK Query eliminating the need to hand-write data fetching and caching" />,
+                  <Bullet point="Streamlined API development with RTK Query eliminating the need for manual data fetching and caching" />,
                   <Bullet point="Designed proof-of-concept frontend with wireframing, Material UI, SASS, and React to handle scalability" />,
-                  <Bullet point="Implemented user authentication with Django REST, including CSRF validation and password reset with email" />,
-                  <Bullet
-                    point="Developed first version of Media Cloud's Search feature supporting online news, Twitter, Reddit, and YouTube"
-                    subBullets={[
-                      "Created an API to get the total attention of a query from two given dates",
-                      "Created Search's automated dates, querying, querying preview, and deactivation of search button",
-                    ]}
-                  />,
+                  <Bullet point="Implemented user authentication with Django REST, CSRF validation, and password reset with email " />,
+                  <Bullet point="Developed first version of Search feature supporting online news, Twitter, Reddit, and YouTube" />,
                 ]}
               />
             </Section>
 
             <Section title="Projects">
+              <ListItem
+                title="Reinforcement Learning for Chess Agents"
+                startDate="September 2024"
+                endDate="January 2025"
+                details={[
+                  <Bullet point="Implemented Advantage Actor-Critic (A2C) and Soft Actor-Critic (SAC) algorithms to train and compete chess agents" />,
+                  <Bullet point="Evaluated performance based on win rates, demonstrating SAC achieving a 4.1:1 win-to-loss ratio over A2C" />,
+                  <Bullet point="Conducted comparative analysis of both algorithms, highlighting strengths and weaknesses in decision-making" />,
+                ]}
+              />
               <ListItem
                 title="DeepArtist - The Artist Classification System"
                 startDate="September 2023"
@@ -223,34 +213,28 @@ export default function Resume() {
                   <Bullet point="Built a scalable Flask backend for model creation, training, and data storage for future expansions and dataset updates" />,
                 ]}
               />
-              <ListItem
-                title="Artelligence - Genre Classification of Paintings by Color Quantification"
-                startDate="July 2023"
-                endDate="September 2024"
-                details={[
-                  <Bullet point="Iteratively quantified WikiArt's 13-genre dataset fetching 30+ features including color palette, moments, and richness" />,
-                  <Bullet point="Implemented a baseline K-Nearest Neighbors classifier, achieving a 30% accuracy rate to establish a starting point" />,
-                  <Bullet point="Established a pipeline for automated model evaluation, optimizing workflow for iterative testing and validation" />,
-                ]}
-              />
             </Section>
 
             <Section title="Technical Knowledge">
               <p>
-                Frameworks: React, Spring Boot, Google Cloud, Azure, Node.js,
-                Django, ASP.NET, Playwright, TensorFlow
+                <strong>Frameworks/Libraries:</strong> React, Angular, Spring
+                Boot, Node.js, Django, .NET, Flask, Google Cloud Platform (GCP),
+                Microsoft Azure, MongoDB, Playwright, ReadyAPI, Postman,
+                Swagger, PostgreSQL, MySQL, JUnit, Jest, Git
               </p>
               <p>
-                Languages: JavaScript, TypeScript, HTML/CSS, Python, Java, C,
-                C#, C++, Assembly, Lean, Racket, SQL
+                <strong>Languages:</strong> TypeScript, JavaScript, HTML, CSS
+                (SASS, Material UI), Python (Pandas, NumPy, Matplotlib,
+                Scikit-learn, TensorFlow, Seaborn), Java, C#, C, C++, Assembly,
+                Lean, Racket, SQL, Bash, Lisp (Racket)
               </p>
             </Section>
 
             <Section title="Interests">
               <p>
-                Freelance abstract artist, mathematics, music composition,
-                programming, piano, reading, skiing, traveling, yoga, weight
-                training
+                Freelance abstract artist,music composition, piano, guitar,
+                post-punk / new wave music, reading, skiing, traveling, yoga,
+                weight training
               </p>
             </Section>
           </div>
